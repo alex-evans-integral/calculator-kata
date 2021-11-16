@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
-import CalculatorButton from "./CalculatorButton";
+import CalculatorNumberButton from "./CalculatorNumberButton";
 
 function App() {
 
-    const [displayValue, setDisplayValue] = useState("0")
+    const [displayValue, setDisplayValue] = useState(0)
 
     return (
         <div className="App">
             <div>
                 {displayValue}
             </div>
-            <CalculatorButton label="1" numberValue={1} action={setDisplayValue}></CalculatorButton>
+            <CalculatorNumberButton numberValue={1} action={setDisplayValue}></CalculatorNumberButton>
         </div>
     );
 }
