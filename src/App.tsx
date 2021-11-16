@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import CalculatorButton from "./CalculatorButton";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [displayValue, setDisplayValue] = useState("0")
+
+    return (
+        <div className="App">
+            <div>
+                {displayValue}
+            </div>
+            <CalculatorButton label="1" numberValue={1} action={setDisplayValue}></CalculatorButton>
+        </div>
+    );
 }
 
 export default App;
